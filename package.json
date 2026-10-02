@@ -1,0 +1,40 @@
+{
+  "name": "animex-scraper",
+  "version": "1.0.0",
+  "description": "High-speed, zero-FlareSolverr API and scraper for Animex (animex.one)",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "animex-scraper": "src/cli.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "scrape": "node src/cli.js",
+    "test": "node --test test/**/*.test.js",
+    "check": "node --check src/index.js && node --check src/app.js && node --check src/client.js && node --check src/cache.js && node --check src/parsers.js && node --check src/unflatten.js && node --check src/cli.js && node --check src/swagger.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "anime",
+    "scraper",
+    "animex",
+    "hls",
+    "m3u8",
+    "stream",
+    "fast-api"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

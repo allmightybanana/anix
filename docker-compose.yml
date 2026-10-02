@@ -1,0 +1,15 @@
+services:
+  animex-scraper:
+    build: .
+    container_name: animex-scraper
+    restart: unless-stopped
+    ports:
+      - "3006:3006"
+    environment:
+      - PORT=3006
+      - HOST=0.0.0.0
+      - ANIMEX_BASE_URL=https://animex.one
+      - ANIMEX_PP_URL=https://pp.animex.one
+      - ANIMEX_GRAPHQL_URL=https://graphql.animex.one
+      - ANIMEX_PLYR_URL=https://plyr.animex.one
+      - CACHE_TTL_MS=300000
